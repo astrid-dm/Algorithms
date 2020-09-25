@@ -1,0 +1,49 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cstring>
+using namespace std;
+int test = 0, ans = 0;
+vector<int> s;
+bool check[100001];
+bool fin[1000001];
+
+void dfs(int i) {
+    check[i] = true;
+    if (!check[s[i]]) {
+        dfs(s[i]);
+    }
+    else if (!fin[s[i]]) {
+        ans++;
+        for (int j = s[i]; j != i; j = s[j]) ans++;
+    }
+    fin[i] = true;
+}
+
+int main(void) {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int cnt = 0, temp = 0, num = 0;
+    cin >> test;
+    while (cnt < test) {
+        cin >> num;
+        s.push_back(0);
+        for (int i = 1; i <= num; i++) {
+            cin >> temp;
+            s.push_back(temp);
+        }
+        for (int i = 1; i <= num; i++) {
+            if (!check[i]) {
+                dfs(i);
+            }
+        }
+        cout << num-ans << "\n";
+        ans = 0;
+        memset(check, false, sizeof(check));
+        memset(fin, false, sizeof(fin));
+        s.clear();
+        cnt++;
+    }
+
+    return 0;
+}
