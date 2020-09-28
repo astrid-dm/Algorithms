@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#define INF 100000
+#define INF 100000 
 using namespace std;
 int n = 0, m = 0, ans = 0;
 int v[501][501]; //학생들의 정보
@@ -49,4 +49,4 @@ int main(void){
     }
     cout << ans << "\n";
     return 0;
-}
+} 
