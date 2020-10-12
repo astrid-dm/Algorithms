@@ -1,0 +1,25 @@
+#include <string>
+#include <vector>
+#include <climits>
+
+using namespace std;
+
+string solution(string s) {
+    string answer = "", temp = "";
+    int mini = INT_MAX, maxi = INT_MIN, temp2 = 0;
+    bool ch = false;
+    
+    for(int i=0; i<=s.size(); i++){
+        if(s[i]==' '||s[i]=='\0'){
+            temp2 = stoi(temp);
+            if(mini>temp2) mini = temp2;
+            if(maxi<temp2) maxi = temp2;
+            temp = "";
+        }
+        else{
+            temp += s[i];
+        }
+    }
+    answer += (to_string(mini) + ' ' + to_string(maxi));
+    return answer;
+}
