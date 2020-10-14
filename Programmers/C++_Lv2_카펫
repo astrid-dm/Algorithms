@@ -1,0 +1,19 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+vector<int> solution(int brown, int yellow) {
+    vector<int> answer;
+    int sum = brown + yellow;
+    for (int i = 1; i <= sum; i++) {
+        int y = sum / i;
+        int x = i;
+        if (y * x == sum && y >= x) { // 조건 
+            answer.clear();
+            answer.push_back(y);
+            answer.push_back(x);
+        }
+    }
+    return answer;
+}
