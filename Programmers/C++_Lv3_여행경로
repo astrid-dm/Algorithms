@@ -1,0 +1,33 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+bool ch[10001];
+vector<string> answer, ans;
+
+bool dfs(string dep, int num, vector<vector<string>> &tickets, vector<bool> &ch) {
+    if (num == tickets.size()) {
+        answer = ans;
+        return true;
+    }
+    for (int i = 0; i < tickets.size(); i++) {
+        if (tickets[i][0] == dep && !ch[i]) {
+            ch[i] = true;
+            ans.push_back(tickets[i][1]);
+            if (dfs(tickets[i][1], num + 1, tickets, ch)) return true; // 조건 2
+            ch[i] = false;
+        }
+    }
+    ans.pop_back(); // 조건2 - (1)
+    return false;
+}
+
+vector<string> solution(vector<vector<string>> tickets) {
+    vector<bool> ch(tickets.size(), false);
+    sort(tickets.begin(), tickets.end()); // 조건 1
+    ans.push_back("ICN");
+    dfs("ICN", 0, tickets, ch);
+
+    return answer;
+}
