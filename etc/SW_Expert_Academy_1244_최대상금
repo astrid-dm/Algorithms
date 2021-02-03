@@ -1,0 +1,63 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+int maxi = 0, ori = 0;
+char temp;
+string s = "";
+
+void reverse(int idx, int cnt){ // 2
+    if(cnt==0){
+        if(stoi(s)>maxi) maxi = stoi(s);
+        return;
+    }
+    for(int i=idx; i>=0; i--){ // 주의
+        for(int j=i-1; j>=0; j--){ // 주의
+                temp = s[i]; // 조건 없음에 주의. 맨 뒤에서부터 비교하는 거라 조건따위 필요없다!
+                s[i] = s[j];
+                s[j] =  temp;
+                reverse(i,cnt-1);
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+        }
+    }
+}
+
+void dfs(int idx, int cnt){ // 1
+    if(cnt==0){
+        if(stoi(s)>maxi) maxi = stoi(s);
+        return;
+    }
+    for(int i=idx; i<s.size(); i++){ // 주의 
+        for(int j=i+1; j<s.size(); j++){
+            if(s[i]-'0'<=s[j]-'0'){ // 주의 // 이 경우가 필요한 케이스는 77732
+                temp = s[i];
+                s[i] = s[j];
+                s[j] =  temp;
+                dfs(i,cnt-1);
+                temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+    if(cnt!=0&&maxi<=ori){
+        maxi = 0;
+        reverse(s.size()-1, cnt);
+    }
+}
+
+int main(void) {
+    ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
+    int test_case = 0, T = 0, cnt = 0;
+    cin >> T;
+    for(test_case=1; test_case<=T; ++test_case){
+        cin >> s >> cnt;
+        maxi = stoi(s), ori = stoi(s);
+        dfs(0,cnt);
+        cout << "#" << test_case << " " << maxi << "\n";
+    }
+   return 0;
+}
