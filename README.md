@@ -4,6 +4,8 @@
 [ENG 🇺🇸] <br>
 <br>
 Here are all of algorithm problems that I've solved ever. <br>
+All of algorithm problems are written in C++ <br>
+I usually use C++ for algorithm. However, I may use other languages for algorithm later. <br><br>
 Since I have written this reposiory for a quite a while, writing styles (ex : explanation style) may be different depending on algorithm problems. <br>
 All of algorithm problems are roughly divided into 4 famous websites. <br>
 <br>
@@ -29,6 +31,8 @@ Last, thank you for visiting my github! 😄<br>
 [KOR 🇰🇷] <br>
 <br>
 여탯껏 풀어온 알고리즘 문제들을 기록해왔습니다.<br>
+모든 알고리즘 문제들은 C++로 작성되었습니다. <br>
+보통은 알고리즘 문제는 C++로 풀지만, 나중에는 다른 언어를 사용할 수도 있습니다. <br><br>
 이 레파지토리를 기록해온지가 꽤 되었기 때문에, 기록 스타일(ex : 설명 스타일)은 알고리즘 문제들에 따라 다를 수 있습니다. <br>
 모든 알고리즘 문제들은 크게 유명한 4개의 사이트들로 나눠집니다. <br>
 <br>
