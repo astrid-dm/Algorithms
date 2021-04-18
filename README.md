@@ -1,7 +1,7 @@
 ## Algorithm Problems
 - - -
 <br>
-## [ENG 🇺🇸] <br>
+**[ENG 🇺🇸]** <br>
 <br>
 Here are all of algorithm problems that I've solved ever. <br>
 Since I have written this reposiory for a quite a while, writing styles (ex : explanation style) may be different depending on algorithm problems. <br>
@@ -26,7 +26,7 @@ Last, thank you for visiting my github! 😄<br>
 - - -
 
 <br>
-## [KOR 🇰🇷] <br>
+**[KOR 🇰🇷]** <br>
 <br>
 여탯껏 풀어온 알고리즘 문제들을 기록해왔습니다.<br>
 이 레파지토리를 기록해온지가 꽤 되었기 때문에, 기록 스타일(ex : 설명 스타일)은 알고리즘 문제들에 따라 다를 수 있습니다. <br>
