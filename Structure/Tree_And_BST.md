@@ -1,10 +1,10 @@
 ## 목차
 1. Tree란
 2. The status of Tree
-    2-1. Perfect 예시
-    2-2. Complete 예시
+    - Perfect 예시
+    - Complete 예시
 3. Binary Search Tree (BST)
-    3-1. BST의 최악의 시나리오
+    - BST의 최악의 시나리오
 4. Linked List와 비교했을때 빠름의 차이점
 5. Tree 코드
 
