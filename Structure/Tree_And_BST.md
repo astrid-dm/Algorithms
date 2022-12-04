@@ -8,7 +8,7 @@
 4. Linked List와 비교했을때 빠름의 차이점
 5. Tree 코드
 
-<br/>
+<br/><hr/>
 
 ### Tree란
 - `LinkedList`는 `Tree`가 둘로 나뉘지 않은것과 동일하다
