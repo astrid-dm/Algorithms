@@ -124,25 +124,25 @@ import java.util.Hashtable;
 public class HashTableDemo {
 	public static void main(String[] args)  {
 		Hashtable<String, String> ht = new Hashtable<String, String>(); // Hashtable 선언
-		
+
 		// 값 추가
 		ht.put("1", "Hello1");
 		ht.put("2", "World2");
 		ht.put("3", "World3");
         
-        if(ht.get("4") == null) ht.put("4", "World4");
-        
-        // Key값으로 값 제거
+		if(ht.get("4") == null) ht.put("4", "World4");
+
+		// Key값으로 값 제거
 		ht.remove("2");
 
-        // HashTable의 크기
-        ht.size();
+		// HashTable의 크기
+		ht.size();
 
-        // for문을 사용하여 HashTable의 값 출력 
+        	// for문을 사용하여 HashTable의 값 출력 
 		for(Map.Entry<String, String> e : ht.entrySet())
 			System.out.println("Key : " + e.getKey() + ", Value : " + e.getValue());
 
-        //  전부 제거
+        	//  전부 제거
 		ht.clear();
 		System.out.println(ht); // 결과출력
 	}
