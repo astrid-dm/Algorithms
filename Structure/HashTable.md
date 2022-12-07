@@ -20,10 +20,6 @@
 - Lookup By Value : O(n)
 
 ### HashTable vs HashMap
-- Null 값 허용 여부
-    - HashTable은 Null을 허용 X, 반면 HashMap은 Null 허용
-- Thread-safe 여부
-    - HashTable은 Thread-safe, 반면 HashMap
 
 |항목|HashTable|HashMap|
 |------|:---:|:---:|
