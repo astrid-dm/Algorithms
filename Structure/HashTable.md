@@ -11,6 +11,7 @@
 ### HashTable이란
 - Key, Value가 1:1로 쌍을 이루어 Table에 저장됨
 - 여기서 Key는 값을 식별하기 위한 고유한 키, Value는 키가 가진 값을 의미
+
 ![HashTable](https://github.com/Astrid-DM/Algorithms/blob/master/Structure/images/HashTable2.png?raw=true)
 
 ### HashTable의 시간 복잡도
