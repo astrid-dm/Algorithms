@@ -23,12 +23,12 @@
 
 |항목|HashTable|HashMap|
 |------|:---:|:---:|
-|Null값 허용|O|X|
+|Null값 허용|X|O|
 |Thread-safe|O|X|
-|Enumeration|Not fail-fast Enumeration 제공|X|
-- 멀티스레드 환경이 아니라면 HashTable은 HashMap보다 성능이 떨어짐
+|Syncronization|O|X|
+- HashMap은 멀티스레드 제공이 반면, HashTable은 한 번에 하나으 스레드만 허용돼서 thread-safe
 - HashMap은 보조 해시를 사용하기 때문에 보조 해시 함수를 사용하지 않는 HashTable에 비해 해시 충돌 (Hash Collision)이 덜 발생할 수 있어 상대적으로 성능상 이점이 있음
-- 최근까지 HashTable은 구현에 거희 변화가 없지만 (컬렉션 프레임웍이 만들어지기 전부터 나온게 HashTable), HashMap은 현재까지도 지속적으로 개선되고 있음
+- HashTable은 Legacy, HashMap은 현재까지도 지속적으로 개선되고 있음
 
 ### HashTable 구현
 ``` java
