@@ -3,6 +3,7 @@
 2. `InsertionSort`
 3. `SelectionSort`
 4. 시간복잡도와 공간복잡도
+5. `Arrays.sort`
 
 <br> 
 
@@ -93,3 +94,16 @@ public class SelectionSort {
 - 세 알고리즘 모두 (최악의 시나리오를 고려했을때) 시간 복잡도는 O(n^2)  
 - 공간 복잡도는 O(1)  
 	- 세 정렬 모두 추가적인 공간 생산없이 정렬이 이루어짐
+
+<br>
+
+### Array.sort()
+- `DualPivotQuickSort` 사용
+- 퀵소트보다 일반적으로 더 개선된 성능 제공
+	- 일반적으로 퀵소트가 제일 빠르지만, 퀵소트보다 개선된 기능이니 코딩 테스트에서 사용해도 무방함
+
+```
+Best Cases : O(nlog(n))
+Average Cases : O(nlog(n))
+Worst Cases : O(n^2)
+```
