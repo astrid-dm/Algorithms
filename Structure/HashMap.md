@@ -1,7 +1,13 @@
+## 목차
+1. Hash란?
+2. HashMap 이란
+3. HashMap과 관련된 코드
+
+<br>
+
 ### Hash란?
 ---
 - [HashTable](https://github.com/Astrid-DM/Algorithms/blob/master/Structure/HashTable.md) 설명 참고
-<br>
 <br>
 
 ### HashMap 이란
@@ -16,7 +22,6 @@
 - Multi Thread를 지원하며, 따라서 동시에 HashMap을 건드릴 경우 Key - value에서 문제가 발생할 수 있음
 	- 따라서 Thread safe를 지원하고 싶으면 HashTable 사용
 
-<br>
 <br>
 
 ### HashMap과 관련된 코드
