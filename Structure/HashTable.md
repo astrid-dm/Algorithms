@@ -26,7 +26,7 @@
 |Null값 허용|X|O|
 |Thread-safe|O|X|
 |Syncronization|O|X|
-- HashMap은 멀티스레드 제공이 반면, HashTable은 한 번에 하나으 스레드만 허용돼서 thread-safe
+- HashMap은 멀티스레드 제공이 반면, HashTable은 한 번에 하나의 스레드만 허용돼서 thread-safe
 - HashMap은 보조 해시를 사용하기 때문에 보조 해시 함수를 사용하지 않는 HashTable에 비해 해시 충돌 (Hash Collision)이 덜 발생할 수 있어 상대적으로 성능상 이점이 있음
 - HashTable은 Legacy, HashMap은 현재까지도 지속적으로 개선되고 있음
 
