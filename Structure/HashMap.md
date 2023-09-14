@@ -38,20 +38,23 @@ map.put("ABC", 1);
 System.out.println(map.get("ABC")); // 1 출력
 
 // 3. HashMap에 특정 Key가 존재하는지 확인
-if(map.containsKey("ABC")) System.out.println("ABC exists"); // 출력 
+if(map.containsKey("ABC")) System.out.println("ABC exists"); // 출력
 
-// 4. HashMap에 기존에 존재하던 Key값을 업데이트 하는 경우
+// 4. HashMap에 특정 Value가 존재하는지 확인
+if(map.containsValue(1)) System.out.println("1 exists"); // 출력
+
+// 5. HashMap에 기존에 존재하던 Key값을 업데이트 하는 경우
 map.put("DEF", map.getOrDefault("DEF", 0) + 1); // "DEF"가 존재하면 "DEF"의 value+1을 저장, 아닐경우 1을 저장
 
-// 5. HashMap으로 for문 돌리기
+// 6. HashMap으로 for문 돌리기
 for(String key : map.keySet()) {
 	System.out.println("key : " + key + " value : " + map.get(key));
 }
 
-// 6. key값 제거
+// 7. key값 제거
 map.remove("ABC");
 
-// 7. 전체 제거
+// 8. 전체 제거
 map.clear();
 
 ```
