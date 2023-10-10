@@ -54,7 +54,15 @@ for(String key : map.keySet()) {
 // 7. key값 제거
 map.remove("ABC");
 
-// 8. 전체 제거
+// 8. key만 가져오기 : keySet()
+for(String key : map.keySet()){
+	System.out.println("키 : " + key);
+}
+
+// 9. value만 가져오기
+ArrayList<Integer> temp = List.of(map.values());
+
+// 10. 전체 제거
 map.clear();
 
 ```
