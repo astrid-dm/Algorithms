@@ -7,11 +7,14 @@ char c = 'a';
 String str = c.toString(); // str = "a"
 ```
 <br>
+
 2번 : "" 더해주기
+
 ``` java
 char c = 'a';
 String str = ch + "";
 ```
+
 <br>
 ### 문자열을 숫자로 변환
 ``` java
