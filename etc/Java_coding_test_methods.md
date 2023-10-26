@@ -200,17 +200,17 @@ Arrays.sort(arr, Collections.reverseOrder());
 ``` java
 // 첫 번째 원소 기준, 오름차순 정렬
 Arrays.sort(intervals, (o1, o2) -> {
-return o1[0]-o2[0];
+	return o1[0]-o2[0];
 });
 
 // 첫 번째 원소 기준, 내림차순 정렬
 Arrays.sort(intervals, (o1, o2) -> {
-return o2[0]-o1[0];
+	return o2[0]-o1[0];
 });
 
 // 두 번째 원소 기준, 오름차순 정렬
 Arrays.sort(intervals, (o1, o2) -> {
-return o1[1]-o2[1];
+	return o1[1]-o2[1];
 });
 ```
 
@@ -226,6 +226,45 @@ int temp = Math.abs(originNumber);
 static int Integer.MAX_VALUE;
 static int Integer.MIN_VALUE;
 ```
+
+### List를 정렬하는 방법
+#### 1. Collections.sort()
+``` java
+// public static void sort(List<T> list)  
+// public static void sort(List<T> list, Comparator<? super T> c)
+
+
+// 오름차순으로 정렬   
+Collections.sort(list);   
+  
+// 내림차순으로 정렬   
+Collections.sort(list, Collections.reverseOrder());   
+  
+// 대소문자 구분없이 오름차순   
+Collections.sort(list, String.CASE_INSENSITIVE_ORDER;   
+  
+// 대소문자 구분없이 내림차순   
+Collections.sortlist, Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER);
+```
+
+#### 2. List.sort()
+``` java
+// default void sort(Comparator<? super E> c)
+
+// 오름차순으로 정렬  
+list.sort(Collections.naturalOrder));  
+  
+// 내림차순으로 정렬  
+list.sort(Collections.reverseOrder());  
+  
+  
+// 대소문자 구분없이 오름차순 정렬  
+list.sort(String.CASE_INSENSITIVE_ORDER);  
+  
+// 대소문자 구분없이 내림차순 정렬  
+list.sort(Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
+```
+
 
 ### int To integer
 ``` java
