@@ -214,19 +214,6 @@ Arrays.sort(intervals, (o1, o2) -> {
 });
 ```
 
-### 숫자
----
-#### 절대값 구하기
-``` java
-int temp = Math.abs(originNumber);
-```
-
-#### 정수의 최대값, 최소값
-``` java
-static int Integer.MAX_VALUE;
-static int Integer.MIN_VALUE;
-```
-
 ### List를 정렬하는 방법
 #### 1. Collections.sort()
 ``` java
@@ -265,6 +252,18 @@ list.sort(String.CASE_INSENSITIVE_ORDER);
 list.sort(Collections.reverseOrder(String.CASE_INSENSITIVE_ORDER));
 ```
 
+### 숫자
+---
+#### 절대값 구하기
+``` java
+int temp = Math.abs(originNumber);
+```
+
+#### 정수의 최대값, 최소값
+``` java
+static int Integer.MAX_VALUE;
+static int Integer.MIN_VALUE;
+```
 
 ### int To integer
 ``` java
