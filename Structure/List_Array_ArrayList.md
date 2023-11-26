@@ -26,6 +26,7 @@ ArrayList<Integer> integers5 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5)); //
 ArrayList<String> colors = new ArrayList<>();
 colors.add("White”);                                // 삽입
 colors.add(0, "Green”);                             // 삽입 (1칸씩 밀림)
+colors.set(0, "Black");                             // 수정
 colors.add("Red”)
 colors.add("Yello”);
 colors.remove("White");                             // 제거 (아이템을 직접 입력)
