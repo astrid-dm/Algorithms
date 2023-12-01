@@ -2,6 +2,8 @@
 1. Hash란?
 2. HashMap 이란
 3. HashMap과 관련된 코드
+4. HashMap의 정렬 - key
+5. HashMap의 정렬 - value
 
 <br>
 
@@ -65,4 +67,101 @@ ArrayList<Integer> temp = List.of(map.values());
 // 10. 전체 제거
 map.clear();
 
+```
+
+---
+### 4. HashMap의 정렬 - key
+``` java
+        Map<String, Integer> map = new HashMap<>();
+
+        map.put("A", 10);
+        map.put("D", 30);
+        map.put("C", 20);
+        map.put("B", 40);
+
+
+        List<String> keySet = new ArrayList<>(map.keySet());
+
+        // 키 값으로 오름차순 정렬
+        Collections.sort(keySet);
+
+        for (String key : keySet) {
+            System.out.print("Key : " + key);
+            System.out.println(", Val : " + map.get(key));
+        }
+       
+        /*  결과
+            Key : A, Val : 10
+            Key : B, Val : 40
+            Key : C, Val : 20
+            Key : D, Val : 30
+         */
+        
+        
+
+        // 키 값으로 내림차순 정렬
+        Collections.reverse(keySet);
+
+        for (String key : keySet) {
+            System.out.print("Key : " + key);
+            System.out.println(", Val : " + map.get(key));
+        }
+        
+        /*  결과
+            Key : D, Val : 30
+            Key : C, Val : 20
+            Key : B, Val : 40
+            Key : A, Val : 10
+        */
+```
+
+---
+### 5. HashMap의 정렬 - value
+``` java
+		Map<String, Integer> map = new HashMap<>();
+
+        map.put("A", 10);
+        map.put("D", 30);
+        map.put("C", 20);
+        map.put("B", 40);
+
+
+        List<String> keySet = new ArrayList<>(map.keySet());
+
+        // Value 값으로 오름차순 정렬
+        keySet.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return map.get(o1).compareTo(map.get(o2));
+            }
+        });
+
+        for (String key : keySet) {
+            System.out.print("Key : " + key);
+            System.out.println(", Val : " + map.get(key));
+        }
+
+        /*
+            결과
+            Key : A, Val : 10
+            Key : C, Val : 20
+            Key : D, Val : 30
+            Key : B, Val : 40
+         */
+
+        // Value 값으로 내림차순 정렬
+        // 위 comparator 람다 표현식으로
+        keySet.sort((o1, o2) -> map.get(o2).compareTo(map.get(o1)));
+
+        for (String key : keySet) {
+            System.out.print("Key : " + key);
+            System.out.println(", Val : " + map.get(key));
+        }
+
+        /* 결과
+            Key : B, Val : 40
+            Key : D, Val : 30
+            Key : C, Val : 20
+            Key : A, Val : 10
+         */
 ```
