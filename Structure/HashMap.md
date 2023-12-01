@@ -118,7 +118,7 @@ map.clear();
 ---
 ### 5. HashMap의 정렬 - value
 ``` java
-	Map<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
 
         map.put("A", 10);
         map.put("D", 30);
