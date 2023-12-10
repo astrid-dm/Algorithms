@@ -1,4 +1,4 @@
-#개요
+# 개요
 1. LinkedHashMap이란
 2. 사용법
 
@@ -18,4 +18,4 @@ for (Map.Entry<String, String> entry : map.entrySet()) {
 }
 
 ```
-- 결과적으로 Valyue1 -> Value2 -> Value3 이라는 순서가 지켜져서 출력됨
+- 결과적으로 Value1 -> Value2 -> Value3 이라는 순서가 지켜져서 출력됨
