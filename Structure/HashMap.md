@@ -21,6 +21,7 @@
 	- null로 key값 저장 X
 	- value는 null로 저장 O
 - 저장 순서와 출력 순서를 보장하지 않는 데이터 구조
+	- `key` 값에 따른 저장 순서를 보장하고 싶은 경우, `LinkedHashMap` 사용 
 - Multi Thread를 지원하며, 따라서 동시에 HashMap을 건드릴 경우 Key - value에서 문제가 발생할 수 있음
 	- 따라서 Thread safe를 지원하고 싶으면 HashTable 사용
 
