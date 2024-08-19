@@ -35,5 +35,7 @@ queue.remove();                             // queue의 첫 번째 값 제거
 queue.poll();                               // queue의 첫 번째 값 반환하고 제거. 비어있다면 null
 queue.isEmpty();                            // queue가 비어있는지 확인 (비어있으면 true)
 queue.size();                               // queue 사이즈 반환
+queue.contains(2);                          // queue에 특정 값이 있는지 확인
+queue.remove(2);                            // queue에서 특정 값을 제거
 queue.clear();                              // queue 초기화
 ```
